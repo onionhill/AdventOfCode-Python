@@ -38,14 +38,10 @@ universe =  expand_universe(lines,10)
 stars = map_hash(universe)
 sum_distance = 0
 
-print(find_distance(stars[1], stars[2] )  )
-quit()
 for key, value in stars.items() :
     for key2 in range(key +1, max(stars) + 1) :
-        print(key,key2,  find_distance(value, stars[key2]))
         sum_distance += find_distance(value, stars[key2])
         
-#print(find_distance(stars[1], stars[3]))
 print('part 1' ,sum_distance)
 
 
