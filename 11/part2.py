@@ -41,10 +41,6 @@ sum_distance = 0
 
 for key, value in stars.items() :
     for key2 in range(key +1, max(stars) + 1) :
-        #if key == 3 and key2 == 6 :
-        #print(key,key2, find_distance(value, stars[key2], empty_rows, empty_cols,10))
-        #print(key, key2,find_distance(value, stars[key2], empty_rows, empty_cols,1))
-        #print(key, key2, find_distance(value, stars[key2], empty_rows, empty_cols,10))
         sum_distance += find_distance(value, stars[key2], empty_rows, empty_cols,1_000_000)
         
 print('part 2' ,sum_distance)
